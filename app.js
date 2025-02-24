@@ -21,3 +21,14 @@ function recorrerAmigo() {
         lista.appendChild(li);
     }
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("No se encontraron amigos para el sorteo")
+        return;
+    }
+    let indiceAleatorio = Math.floor(Math.random()* amigos.length);
+    let amigoSeleccionado = amigos[indiceAleatorio];
+    let elementoResultado = document.getElementById("resultado");
+    elementoResultado.innerHTML = `¡El amigo secreto es ${amigoSeleccionado}!`
+}
